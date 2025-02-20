@@ -1,7 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Calculator.MainPage">
+             x:Class="Calculator.MainPage"
+             Title="Calculator">
 
     <ScrollView>
         <VerticalStackLayout
@@ -46,12 +47,15 @@
                 <Button BackgroundColor="White" Grid.Row="5" Grid.Column="2" Text="3" Clicked="NumberBtn" />
                 <Button BackgroundColor="White" Grid.Row="5" Grid.Column="3" Text="+" Clicked="OperatorBtn" />
 
-                <!-- Rad 5 -->
                 <Button BackgroundColor="White" Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="2" Text="0" Clicked="NumberBtn" HorizontalOptions="FillAndExpand" />
                 <Button BackgroundColor="White" Grid.Row="6" Grid.Column="2" Text="." Clicked="NumberBtn" />
                 <Button BackgroundColor="White" Grid.Row="6" Grid.Column="3" Text="=" Clicked="EqualBtn" />
             </Grid>
 
+
+            <Label Text="Griphilator" FontAttributes="Bold" FontSize="Large" TextColor="White"></Label>
+            
+          
 
         </VerticalStackLayout>
     </ScrollView>

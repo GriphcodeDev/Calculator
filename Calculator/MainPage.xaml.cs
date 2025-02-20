@@ -3,6 +3,7 @@
     public partial class MainPage : ContentPage
     {
         private double storage = 0;
+        private double memory = 0;
         private double operand = 0;
         private string operation = "";
 
@@ -87,6 +88,16 @@
             Calculation.Text = "";
         }
 
+        private async void MemoryBtn(double value)
+        {
+            memory = value;
+            await DisplayAlert("Memory", "Value Stored", "OK");
+        }
+
+        private double CatchFromMemoryBtn(object sender, EventArgs e)
+        {
+            return memory;
+        }
 
     }
-} 
+}
