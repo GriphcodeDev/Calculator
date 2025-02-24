@@ -12,6 +12,8 @@
             InitializeComponent();
         }
 
+      
+
         private void NumberBtn(object sender, EventArgs e)
         {
             Button button = (Button)sender;
@@ -88,15 +90,17 @@
             Calculation.Text = "";
         }
 
-        private async void MemoryBtn(double value)
+        private void MemoryValueBtn(object sender, EventArgs e)
         {
-            memory = value;
-            await DisplayAlert("Memory", "Value Stored", "OK");
+            if (double.TryParse(Stored.Text, out storage))
+            {
+                memory += storage;
+            }
         }
 
-        private double CatchFromMemoryBtn(object sender, EventArgs e)
+        private void GrabMemoryBtn(object sender, EventArgs e)
         {
-            return memory;
+            Stored.Text = memory.ToString();
         }
 
     }
