@@ -47,8 +47,7 @@
 
             Calculation.Text = storage.ToString();
 
-            operation = "";
-            operand = 0;
+           
         }
 
         private void Calculate()
